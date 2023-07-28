@@ -1,21 +1,23 @@
 {
-  "name": "@artcom/react-three-arjs",
-  "version": "0.5.2",
+  "name": "@thinkmariale/react-three-arjs",
+  "version": "0.0.1",
   "description": "AR.js with react-three-fiber ",
-  "main": "lib/index.js",
+  "main": "build/index.js",
+  "module": "build/esm/index.js",
   "files": [
-    "lib/"
+    "build/"
   ],
   "scripts": {
-    "watch": "babel --watch src --out-dir lib",
-    "build": "babel src --out-dir lib --source-maps"
+    "watch": "babel --watch src --out-dir build",
+    "build_babel": "rm -rf build && babel src --out-dir build --source-maps",
+    "build": "rm -rf build && rollup --config"
   },
   "engines": {
     "node": ">= 16.15"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artcom/react-three-arjs.git"
+    "url": "git+https://github.com/thinkmariale/react-three-arjs.git"
   },
   "keywords": [
     "react",
@@ -26,24 +28,28 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/artcom/react-three-arjs/issues"
+    "url": "https://github.com/thinkmariale/react-three-arjs/issues"
   },
-  "homepage": "https://github.com/artcom/react-three-arjs#readme",
+  "homepage": "https://github.com/thinkmariale/react-three-arjs#readme",
   "peerDependencies": {
-    "@ar-js-org/ar.js": "^3.4.3",
-    "@react-three/fiber": "^8.10.1",
+    "@ar-js-org/ar.js": "^3.4.4",
+    "@react-three/fiber": "^8.13.4",
     "buffer": "^6.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "three": "^0.148.0"
+    "three": "^0.151.0"
   },
   "devDependencies": {
-    "@ar-js-org/ar.js": "^3.4.3",
+    "@ar-js-org/ar.js": "^3.4.4",
     "@babel/cli": "^7.20.7",
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@react-three/fiber": "^8.10.1",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.0",
     "buffer": "^6.0.3",
     "core-js": "^3.27.2",
     "eslint": "^8.32.0",
@@ -56,6 +62,8 @@
     "prettier": "^2.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "three": "^0.148.0"
+    "rollup": "^2.79.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "three": "^0.151.0"
   }
 }

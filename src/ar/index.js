@@ -1,4 +1,4 @@
-import ARMarker from "./arMarker"
+//import ARMarker from "./arMarker"
 import ARCanvas from "./arCanvas"
 
-export { ARCanvas, ARMarker }
+export { ARCanvas }

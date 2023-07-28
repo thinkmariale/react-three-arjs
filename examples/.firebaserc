@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "react-three-ar"
+  },
+  "targets": {
+    "react-three-ar": {
+      "hosting": {
+        "dev": [
+          "react-three-ar-dev"
+        ],
+        "prod": [
+          "react-three-ar"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,20 @@
+{
+  "hosting": [
+    {
+      "public": "build",
+      "target": "prod",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "frameworksBackend": {
+        "region": "us-central1"
+      }
+    },
+    {
+      "public": "build",
+      "target": "dev",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "frameworksBackend": {
+        "region": "us-central1"
+      }
+    }
+  ]
+}

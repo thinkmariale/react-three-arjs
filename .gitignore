@@ -4,3 +4,5 @@ example/cert.pem
 example/key.pem
 example/dist
 lib/
+.DS_Store
+build
